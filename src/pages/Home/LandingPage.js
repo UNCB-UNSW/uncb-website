@@ -1,9 +1,14 @@
+import styled from 'styled-components'
+
+const LandingWrapper = styled.section`
+    height: 100vh;
+`
 
 const LandingPage = () => {
     return (
-        <section>
-            bozo
-        </section>
+        <LandingWrapper>
+            GOIHWESROPGIJWEPOGJKPOWKEG
+        </LandingWrapper>
     )
 }
 
