@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NavbarWrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
     border-bottom: 2px solid #cacac5;
 `
 
@@ -18,7 +18,7 @@ const LinkWrapper = styled.ul`
 const LinkItems = styled(Link)`
     color: black;
     text-decoration: none;  
-    margin: 0 30px 0 30px;
+    margin: 0 60px 0 60px;
 `
 
 const Navbar = () => {
