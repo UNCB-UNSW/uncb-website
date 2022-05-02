@@ -2,6 +2,16 @@
     font-family: 'Raleway';
     src: URL('./fonts/Raleway-VariableFont_wght.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'GothicBlack';
+    src: URL('./fonts/GothicA1-Black.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'GothicMedium';
+    src: URL('./fonts/GothicA1-Medium.ttf') format('truetype');
+}
   
 * {
     border: 0;
