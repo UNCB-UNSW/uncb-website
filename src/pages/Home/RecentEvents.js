@@ -37,6 +37,36 @@ const CubeImg = styled.img`
     width: 15vw;
 `
 
+const BlogWrapper = styled.div`
+
+`
+const BlogImg = styled.img`
+`
+
+const BlogTitle = styled.div`
+`
+
+const Date = styled.div`
+`
+
+const LearnMore = styled.div`
+`
+let apiData = []
+
+fetch('https://uncb.xyz/blog/ghost/api/v3/content/posts/?key=837c5e73ef5b72d3b5e9e23be8&fields=title,url,feature_image,excerpt&limit=3')
+.then(response => response.json())
+.then(result => {
+    result.posts.forEach((post) => {
+        apiData.push({
+            "url": post.url,
+            "title": post.title,
+            "feature_image": post.feature_image,
+            "date": post.published_at
+        });
+    })
+})
+console.log(apiData);
+
 const RecentEvents = () => {
     return (
         <RecentEventsSection>
@@ -49,7 +79,17 @@ const RecentEvents = () => {
                 </TitleWrapper>
                 <CubeImg src={Box} alt="Box"/>
             </TopWrapper>
-
+            {apiData.map((data) => {
+                console.log('ffff');
+                return (
+                    <BlogWrapper>
+                        <BlogImg src={data.feature_image}/>
+                        <BlogTitle>{data.title}</BlogTitle>
+                        <Date>{data.date}</Date>
+                        <LearnMore href={data.url}>Learn More '{'>'}'</LearnMore>
+                    </BlogWrapper>
+                )
+            })}
         </RecentEventsSection>
     )
 }
