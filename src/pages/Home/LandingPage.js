@@ -34,7 +34,7 @@ const Button = styled(Link)`
     color: black;
 
     padding: 20px;
-    border: 1px solid black;
+    border: 1.5px solid black;
     border-radius: 10px;
 
     text-transform: none;
