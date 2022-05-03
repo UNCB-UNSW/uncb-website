@@ -34,7 +34,7 @@ const Button = styled(Link)`
     color: black;
 
     padding: 20px;
-    border: 1px solid black;
+    border: 1.5px solid black;
     border-radius: 10px;
 
     text-transform: none;
@@ -76,8 +76,8 @@ const Box = styled.div`
 
 const LandingPage = () => {
     const scrollHandler = () => {
-        Element = document.querySelector('#about');
-        Element.scrollIntoView({ behavior: 'smooth' })
+        let element = document.querySelector('#about');
+        element.scrollIntoView({ behavior: 'smooth' })
     }
     return (
         <LandingWrapper>
