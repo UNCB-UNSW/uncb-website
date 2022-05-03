@@ -1,10 +1,14 @@
 import LandingPage from './LandingPage'
+import About from './About'
+import RecentEvents from './RecentEvents'
 
 const Home = () => {
     return (
-        <div>
+        <>
             <LandingPage/>
-        </div>
+            <About/>
+            <RecentEvents/>
+        </>
     )
 }
 
