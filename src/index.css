@@ -2,12 +2,17 @@
     font-family: 'Raleway';
     src: URL('./fonts/Raleway-VariableFont_wght.ttf') format('truetype');
 }
-
+  
 @font-face {
     font-family: 'GothicBlack';
     src: URL('./fonts/GothicA1-Black.ttf') format('truetype');
 }
   
+@font-face {
+    font-family: 'GothicBold';
+    src: URL('./fonts/GothicA1-Bold.ttf') format('truetype');
+}
+
 @font-face {
     font-family: 'GothicMedium';
     src: URL('./fonts/GothicA1-Medium.ttf') format('truetype');
@@ -28,5 +33,5 @@ body {
 }
   
 html, body {
-    overflow:hidden;  
+    overflow-x:hidden;  
 }

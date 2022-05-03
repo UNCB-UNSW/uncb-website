@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 import ArrowImg from '../../assets/arrow.svg'
 
 const LandingWrapper = styled.section`
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 `
 
 const MainWrapper = styled.div`
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 `
 
 const TextWrapper = styled.div`
@@ -73,6 +75,10 @@ const Box = styled.div`
 `
 
 const LandingPage = () => {
+    const scrollHandler = () => {
+        Element = document.querySelector('#about');
+        Element.scrollIntoView({ behavior: 'smooth' })
+    }
     return (
         <LandingWrapper>
             <Navbar/>
@@ -86,7 +92,7 @@ const LandingPage = () => {
 
                     <BottomWrapper>
                         <Button to="/blog">Check out our blog! <Arrow src={ArrowImg} alt="arrow"/></Button>
-                        <ExploreWrapper>
+                        <ExploreWrapper onClick={scrollHandler}>
                             <ExploreText>
                                 Explore.
                             </ExploreText>
