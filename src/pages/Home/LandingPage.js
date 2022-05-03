@@ -76,8 +76,8 @@ const Box = styled.div`
 
 const LandingPage = () => {
     const scrollHandler = () => {
-        Element = document.querySelector('#about');
-        Element.scrollIntoView({ behavior: 'smooth' })
+        let element = document.querySelector('#about');
+        element.scrollIntoView({ behavior: 'smooth' })
     }
     return (
         <LandingWrapper>
