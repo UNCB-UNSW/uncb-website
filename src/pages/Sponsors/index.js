@@ -1,35 +1,45 @@
 import Navbar from '../../components/Navbar'
 import { useState } from 'react'
 import styled from 'styled-components'
-import SponsorsGrid from './SponsorsGrid'
+import SponsorsColumns from './SponsorsColumns'
+import Shapes from './Shapes'
+import Squares from '../../assets/squares.svg'
 
 const JinsButton = styled.button`
     border: solid 3px black;
     cursor: pointer;
-    position: absolute; 
+    position: absolute;
     display: block;
     top: 50%;
     left: 50%;
+    z-index: 1;
 `
 const SponsorsWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-`
-
-const PageWrapper = styled.div`
-    display: grid;
-    flex-grow: 1;
-    grid-template-columns: 1fr 1fr;
+    //background-color: #c2c8ff;
 `
 
 const Title = styled.h1`
-  display: block;
-  color: #FFD3C0;
-  text-align: center;
-  font-size: 3em;
-  font-weight: 900;
-  padding-top: 4vh;
+    padding-top: 35vh;
+    padding-bottom: 10vh;
+
+    max-height: 35vh;
+    text-align: center;
+    background-color: #FFD700;
+
+    //font-family: 'Gothic A1';
+    position: relative;
+    z-index: 999;
+    font-size: 2em;
+    font-weight: 900px;
+    overflow-x: hidden;
+`
+
+const Graphic = styled.img`
+    background-color: transparent;
+    display: block;
+    position: absolute;
+    top: -55vh;
+    left: 50vw;
 `
 
 const Sponsors = () => {
@@ -39,22 +49,16 @@ const Sponsors = () => {
     }
     return (
         <SponsorsWrapper>
-            
+            <Shapes></Shapes>   
             {show && <Navbar/>}
-            <PageWrapper>
-                <Title>
-                    OUR PARTNERS
-                </Title>
-                <SponsorsGrid>
-                </SponsorsGrid>   
-            </PageWrapper>
-
-            
-            
+            <Title>
+                <Graphic src={Squares} alt="" />
+                OUR SPONSORS
+            </Title>
             <JinsButton onClick={handleButt}>
                     HIDE
             </JinsButton>
-
+            <SponsorsColumns/>
         </SponsorsWrapper>
     )
 }
