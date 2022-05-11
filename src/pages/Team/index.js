@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar'
 import styled from 'styled-components'
 import pinkCircle from '../../assets/Pink_Circle.png'
+import Member from './components/Member'
 
 const Box = styled.div`
     border: 1px solid black;
@@ -8,12 +9,13 @@ const Box = styled.div`
     width: 90%;
     height: 100%;
 `
-const ProfilePic = styled.img`
-    display: block;
-    margin: 0;
-    height: 50px;
-    width: 50px;
-`
+// const ProfilePic = styled.img`
+//     display: block;
+//     margin: 0;
+//     height: 50px;
+//     width: 50px;
+// `
+
 const MatrixWrapper = styled.div`
     margin: 15px;
     position: relative;
@@ -28,18 +30,16 @@ const Team = () => {
         <div>
             <Navbar/>
             <MatrixWrapper>
-                <Box style={{gridRow: "1", gridColumn: "5 / span 2",
+                <Member style={{gridRow: "1", gridColumn: "5 / span 2",
                             justifyItems: "center"}}/>
-                <Box style={{gridRow: "2", gridColumn: "7 / span 2",
+                <Member style={{gridRow: "2", gridColumn: "7 / span 2",
                             marginTop: "-50%"}}/>
-                <Box style={{gridRow: "2", gridColumn: "3 / span 2"}}/>
-                <Box style={{gridRow: "2", gridColumn: "5 / span 2"}}/>
-                <Box style={{gridRow: "3", gridColumn: "3 / span 2", 
+                <Member style={{gridRow: "2", gridColumn: "3 / span 2"}}/>
+                <Member style={{gridRow: "3", gridColumn: "3 / span 2", 
                             marginLeft: "50%"}}/>
-                <Box style={{gridRow: "3", gridColumn: "5 / span 2", 
-                            marginLeft: "50%"}}/>        
-                <Box style={{gridRow: "3", gridColumn: "6 / span 2",
-                            marginLeft: "100%"}}/> 
+                <Member style={{gridRow: "3", gridColumn: "5 / span 2", 
+                            marginLeft: "50%"}}/>
+                <Member style={{gridRow: "2", gridColumn: "5 / span 2"}}/>
             </MatrixWrapper>
         </div>
     )
