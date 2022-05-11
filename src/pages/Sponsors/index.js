@@ -44,6 +44,7 @@ const Graphic = styled.img`
 
 const Sponsors = () => {
     const [show, setShow] = useState(true);
+    // code review: i like your use of variable names
     const handleButt = () => {
         setShow(!show);
     }
