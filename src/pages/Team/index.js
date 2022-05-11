@@ -33,11 +33,13 @@ const Team = () => {
                 <Box style={{gridRow: "2", gridColumn: "7 / span 2",
                             marginTop: "-50%"}}/>
                 <Box style={{gridRow: "2", gridColumn: "3 / span 2"}}/>
+                <Box style={{gridRow: "2", gridColumn: "5 / span 2"}}/>
                 <Box style={{gridRow: "3", gridColumn: "3 / span 2", 
                             marginLeft: "50%"}}/>
                 <Box style={{gridRow: "3", gridColumn: "5 / span 2", 
-                            marginLeft: "50%"}}/>
-                <Box style={{gridRow: "2", gridColumn: "5 / span 2"}}/>
+                            marginLeft: "50%"}}/>        
+                <Box style={{gridRow: "3", gridColumn: "6 / span 2",
+                            marginLeft: "100%"}}/> 
             </MatrixWrapper>
         </div>
     )
