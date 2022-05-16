@@ -1,6 +1,8 @@
 import LandingPage from './LandingPage'
 import About from './About'
 import RecentEvents from './RecentEvents'
+import RecentArticles from './RecentArticles'
+import Footer from '../../components/Footer'
 
 const Home = () => {
     return (
@@ -8,6 +10,8 @@ const Home = () => {
             <LandingPage/>
             <About/>
             <RecentEvents/>
+            <RecentArticles/>
+            <Footer/>
         </>
     )
 }
