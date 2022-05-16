@@ -44,12 +44,13 @@ const BlogWrapper = styled.div`
 `
 
 const BlogImg = styled.div`
-    height: 30vh;
+    height: 35vh;
     width: 30vw;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat; /* Background image doesn’t tile */ 
+    background-size: cover; /* This is what makes the background image rescale based on the container’s size */
     background-image: url(${props => props.backgroundImg});
     filter: saturate(10%) contrast(120%) hue-rotate(90deg) brightness(100%);
-
 `
 
 const RightWrapper = styled.div`
@@ -62,7 +63,7 @@ const RightWrapper = styled.div`
 
 const TopInfo = styled.div`
     font-family: GothicBlack;
-    font-size: 32px;
+    font-size: 1.5vw;
     flex-grow: 1;
 `
 
