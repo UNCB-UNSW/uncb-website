@@ -75,6 +75,7 @@ const Date = styled.div`
     font-family: GothicMedium;
     color: #656565;
     font-size: 18px;
+    align-self: flex-end;
 `
 
 const LearnMore = styled.a`
