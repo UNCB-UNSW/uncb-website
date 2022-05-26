@@ -1,4 +1,4 @@
-const execData = [
+export const execData = [
 	{
 		imgPath: "../paj.jpg",
 		name: "Paj Sae Lim",
@@ -64,7 +64,7 @@ const execData = [
 	},
 ];
 
-const dirData = [
+export const dirData = [
 	{
 		imgPath: "../sanjith.jpg",
 		name: "Sanjith De Silva",
