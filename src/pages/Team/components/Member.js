@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import pinkCircle from '../../../assets/Pink_Circle.png'
 
 const MemberWrapper = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border: 1px solid red;
-    overflow: hidden;
-
+    height: 100%;
     &:hover {
         cursor: pointer;
     }
@@ -26,16 +27,14 @@ const Overlay = styled.div`
 
     ${MemberWrapper}:hover &{
         opacity: 1;
-        transform: translateY(-50%);
-	    color: white;
+    }
+
+    & * {
+        background-color: transparent;
     }
 `
 
 const MemberDetails = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     opacity: 0;
     position: absolute;
     top: 50%;
@@ -43,6 +42,7 @@ const MemberDetails = styled.div`
     overflow: hidden;
     width: 100%;
     z-index: 2;
+    text-align: center;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -53,22 +53,38 @@ const MemberDetails = styled.div`
         transform: translateY(-50%);
         color: white;
     }
+
+    & > h2 {
+        font-size: 1rem;
+        line-height: calc(1rem + 10px);
+    }
+
+    & > h4 {
+        font-size: 0.7rem;
+        line-height: calc(1rem + 10px);
+    }
+
+    & > h6 {
+        font-size: 0.5rem;
+        line-height: calc(1rem + 10px);
+    }
 `
 
-const MemberPic = styled.img`
+const MemberPic = styled.div`
     width: 100%;
     height: 100%;
-    border: 1px solid red;
-    object-fit: contain;
+    background-color: blue;
 `
 
-const Member = ({membersData, style}) => {
+const Member = ({memberData, style}) => {
     return (
         <MemberWrapper style={style}>
             <MemberPic src={pinkCircle}></MemberPic>
             <Overlay>
                 <MemberDetails>
-                    <p>Placeholder text</p>
+                    <h2>{memberData.name}</h2>
+                    <h4>{memberData.description}</h4>
+                    <h6>{memberData.role}</h6>
                 </MemberDetails>
             </Overlay>
         </MemberWrapper>
