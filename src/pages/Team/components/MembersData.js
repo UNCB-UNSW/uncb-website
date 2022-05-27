@@ -1,155 +1,163 @@
+import Paj from '../teamPhotos/paj.jpg'
+import Kmao from '../teamPhotos/kmao.png'
+import Roger from '../teamPhotos/roger.png'
+import Avneet from '../teamPhotos/avneet.png'
+import Eric from '../teamPhotos/eric.jpg'
+import Alice from '../teamPhotos/alice.jpg'
+import James from '../teamPhotos/james.png'
+import Eva from '../teamPhotos/eva.png'
+import Desmond from '../teamPhotos/desmond.jpg'
+import Eunice from '../teamPhotos/eunice.png'
+import Kevin from '../teamPhotos/kevin.jpg'
+import Scott from '../teamPhotos/scott.jpg'
+import Sashank from '../teamPhotos/eric.jpg'
+import Alexei from '../teamPhotos/eric.jpg'
+import Catherine from '../teamPhotos/catherine.png'
+import Nala from '../teamPhotos/nala.png'
+import Kirat from '../teamPhotos/kirat.jpg'
+import Yuvraj from '../teamPhotos/yuvi.jpg'
+import Alex from '../teamPhotos/alex.jpg'
+
 export const execData = [
 	{
-		imgPath: "../paj.jpg",
+		imgPath: Paj,
 		name: "Paj Sae Lim",
 		description: "CryptoGodPaj",
 		role: "Co-President",
-		containerID: "exec-member-1",
 	},
 	{
-		imgPath: "../kmao.png",
+		imgPath: Kmao,
 		name: "Kevin Mao",
-		description: "You can call me K Meow",
+		description: "@kmao37",
 		role: "Co-President",
-		containerID: "exec-member-2",
 	},
 	{
-		imgPath: "../roger.png",
+		imgPath: Roger,
 		name: "Roger Chen",
-		description: "CryptoGodRoger",
+		description: "",
 		role: "Co-President",
-		containerID: "exec-member-3",
 	},
 	{
-		imgPath: "../avneet.png",
+		imgPath: Avneet,
 		name: "Avneet Singh",
-		description: "CryptoGodAvneet",
+		description: "",
 		role: "Vice-President",
-		containerID: "exec-member-4",
 	},
 	{
-		imgPath: "../eric.jpg",
+		imgPath: Eric,
 		name: "Eric Ning",
-		description: "I am very smart",
+		description: "george michael",
 		role: "Vice-President",
-		containerID: "exec-member-5",
 	},
 	{
-		imgPath: "../alice.jpg",
+		imgPath: Alice,
 		name: "Alice Liao",
 		description: "",
 		role: "Treasurer",
-		containerID: "exec-member-6",
 	},
 	{
-		imgPath: "../james.jpg",
+		imgPath: James,
 		name: "James Teng",
 		description: "",
 		role: "Head of Technology",
-		containerID: "exec-member-7",
 	},
 	{
-		imgPath: "../eva.png",
+		imgPath: Eva,
 		name: "Eva Wu",
-		description: "King",
+		description: "",
 		role: "Secretary",
-		containerID: "exec-member-8",
 	},
 	{
-		imgPath: "../desmond.jpg",
+		imgPath: Desmond,
 		name: "Desmond Ma",
 		description: "	",
 		role: "Secretary",
-		containerID: "exec-member-9",
 	},
 ];
 
 export const dirData = [
 	{
-		imgPath: "../sanjith.jpg",
-		name: "Sanjith De Silva",
-		description: "",
-		role: "Director of Socials",
-		containerID: "dir-member-1",
-	},
-	{
-		imgPath: "../eunice.png",
+		imgPath: Eunice,
 		name: "Eunice Chan",
 		description: "",
 		role: "Director of Socials",
-		containerID: "dir-member-2",
 	},
 	{
-		imgPath: "../kevin.jpg",
+		imgPath: Kevin,
 		name: "Kevin Bao",
 		description: "",
 		role: "Director of HR",
-		containerID: "dir-member-3",
 	},
 	{
-		imgPath: "../scott.jpg",
+		imgPath: Scott,
 		name: "Scott Connally",
 		description: "",
 		role: "Director of HR",
-		containerID: "dir-member-4",
 	},
 	{
-		imgPath: "../nala.png",
-		name: "Nala Hong",
+		imgPath: Sashank,
+		name: "Sashank Bandi",
 		description: "",
-		role: "Director of Careers",
-		containerID: "dir-member-5",
+		role: "Director of Marketing",
 	},
 	{
-		imgPath: "../catherine.png",
+		imgPath: Alexei,
+		name: "Alexei Machkevitch",
+		description: "",
+		role: "Director of Marketing",
+	},
+	{
+		imgPath: Catherine,
 		name: "Catherine Xie",
 		description: "",
 		role: "Director of Careers",
-		containerID: "dir-member-6",
 	},
 	{
-		imgPath: "../kirat.jpg",
+		imgPath: Nala,
+		name: "Nala Hong",
+		description: "",
+		role: "Director of Careers",
+	},
+	{
+		imgPath: Kirat,
 		name: "Kirat Singh",
 		description: "",
 		role: "Director of Education",
-		containerID: "dir-member-7",
 	},
 	{
-		imgPath: "../yuvi.jpg",
+		imgPath: Yuvraj,
 		name: "Yuvraj Singh",
 		description: "",
 		role: "Director of Education",
-		containerID: "dir-member-8",
 	},
 	{
-		imgPath: "../alex.jpg",
+		imgPath: Alex,
 		name: "Alex Weng",
 		description: "",
 		role: "Director of Publications",
-		containerID: "dir-member-9",
 	},
 ];
 
-const advisorData = [
-	{
-		imgPath: "../cameron.png",
-		name: "Cameron Baker",
-		description: "",
-		role: "Solidity Developer @ Lyra",
-		containerID: "advisor-member-1",
-	},
-	{
-		imgPath: "../zhong.png",
-		name: "Zhong Guan",
-		description: "",
-		role: "Counsel",
-		containerID: "advisor-member-2",
-	},
-	{
-		imgPath: "../holmen.png",
-		name: "Holmen Tham",
-		description: "",
-		role: "Technical Advisor",
-		containerID: "advisor-member-3",
-	},
-];
+// const advisorData = [
+// 	{
+// 		imgPath: "../cameron.png",
+// 		name: "Cameron Baker",
+// 		description: "",
+// 		role: "Solidity Developer @ Lyra",
+// 		containerID: "advisor-member-1",
+// 	},
+// 	{
+// 		imgPath: "../zhong.png",
+// 		name: "Zhong Guan",
+// 		description: "",
+// 		role: "Counsel",
+// 		containerID: "advisor-member-2",
+// 	},
+// 	{
+// 		imgPath: "../holmen.png",
+// 		name: "Holmen Tham",
+// 		description: "",
+// 		role: "Technical Advisor",
+// 		containerID: "advisor-member-3",
+// 	},
+// ];

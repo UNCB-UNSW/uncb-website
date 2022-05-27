@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Eric from '../teamPhotos/eric.jpg'
 
 const MemberWrapper = styled.div`
     position: absolute;
@@ -76,8 +75,8 @@ const MemberPic = styled.div`
     background-position: center center;
     background-repeat: no-repeat; /* Background image doesn’t tile */ 
     background-size: cover; /* This is what makes the background image rescale based on the container’s size */
-    background-image: url(${props => props.src});
-    filter: grayscale(0.9);
+    background-image: url(${props => (props.src)});
+    filter: grayscale(0.8);
     transition: 0.5s ease-in-out;
     &:hover {
         filter: none;
@@ -85,9 +84,10 @@ const MemberPic = styled.div`
 `
 
 const Member = ({memberData, style}) => {
+    console.log(memberData.imgPath)
     return (
         <MemberWrapper style={style}>
-            <MemberPic src={Eric}></MemberPic>
+            <MemberPic src={memberData.imgPath}></MemberPic>
             <Overlay>
                 <MemberDetails>
                     <h2>{memberData.name}</h2>
