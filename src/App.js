@@ -13,9 +13,9 @@ import { ThemeContext } from "./ThemeContext";
 const App = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
-  
+
   return (
-    <ThemeProvider theme={darkMode === true ? lightTheme : darkTheme}>
+    <ThemeProvider theme={darkMode === true ?  darkTheme : lightTheme}>
       <GlobalStyles />
       <BrowserRouter>
         <Routes>        

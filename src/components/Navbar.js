@@ -1,4 +1,5 @@
-import Logo from '../assets/logo.svg'
+import BlackLogo from '../assets/blackLogo.svg'
+import WhiteLogo from '../assets/whiteLogo.png'
 import Moon from '../assets/moon.svg'
 import Sun from '../assets/sun.svg'
 import styled from 'styled-components'
@@ -10,7 +11,7 @@ const NavbarWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 10px 50px 10px 50px;
-    border-bottom: 2px solid #cacac5;
+    border-bottom: 1px solid ${({ theme }) => theme.mainText};
 `
 
 const LinkWrapper = styled.ul`
@@ -47,7 +48,7 @@ const Navbar = () => {
 
     return (
         <NavbarWrapper>
-            <Img src={Logo} alt="logo" draggable="false" />
+            <Img src={darkMode ? WhiteLogo : BlackLogo} alt="logo" draggable="false" />
             <LinkWrapper>
                 <LinkItems to="/">Home</LinkItems>
                 <LinkItems to="/team">Team</LinkItems>

@@ -38,6 +38,7 @@ const BottomWrapper = styled.div`
 
 const CubeImg = styled.img`
     width: 15vw;
+    filter: ${({theme}) => theme.darkMode === true ? 'invert(100%) sepia(0%) saturate(7500%) hue-rotate(324deg) brightness(105%) contrast(104%)' : 'none'}; // turn box to white for darkmode
 `
 
 const BottomText = styled.div`  

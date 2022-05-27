@@ -31,6 +31,7 @@ const Subtitle  = styled.div`
 
 const Cube = styled.img`
     width: 10vw;
+    filter: ${({theme}) => theme.darkMode === true ? 'invert(100%) sepia(0%) saturate(7500%) hue-rotate(324deg) brightness(105%) contrast(104%)' : 'none'}; // turn box to white for darkmode
 `
 
 const ArticlesTitle = styled.div`
@@ -47,6 +48,7 @@ const ArticlesButton = styled.button`
     padding: 10px 25px 10px 25px;
     background-color: ${({ theme }) => theme.articlesBg};
     border: 1px solid ${({ theme }) => theme.mainText};
+    color: ${({ theme }) => theme.mainText};
 `
 
 const RightWrapper = styled.div`
