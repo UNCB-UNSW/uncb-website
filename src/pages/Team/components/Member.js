@@ -55,18 +55,18 @@ const MemberDetails = styled.div`
     }
 
     & > h2 {
-        font-size: 1rem;
-        line-height: calc(1rem + 10px);
+        font-size: 1.1rem;
+        line-height: calc(2rem + 10px);
     }
 
     & > h4 {
-        font-size: 0.7rem;
-        line-height: calc(1rem + 10px);
+        font-size: 0.8rem;
+        line-height: calc(2rem + 10px);
     }
 
     & > h6 {
-        font-size: 0.5rem;
-        line-height: calc(1rem + 10px);
+        font-size: 0.7rem;
+        line-height: calc(2rem + 10px);
     }
 `
 

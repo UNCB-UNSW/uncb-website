@@ -27,14 +27,14 @@ const MatrixItemWrapper = styled.div`
 
 const Team = () => {
     const stylesArr = [
-        {gridRow: "1", gridColumn: "2", transform: "translate3d(0, 50%, 0) scale(0.9)"},
-        {gridRow: "2", gridColumn: "1", transform: "translate3d(0, 0, 0) scale(0.7"},
-        {gridRow: "2", gridColumn: "2",  transform: "translate3d(-10.5%, 40%, 0) scale(0.8)"},
-        {gridRow: "2", gridColumn: "3", transform: "translate3d(-15%, 60%, 0) scale(0.7)"},
+        {gridRow: "1", gridColumn: "2", transform: "translate3d(0, 50%, 0) scale(0.83)"},
+        {gridRow: "2", gridColumn: "1", transform: "translate3d(0, 0, 0) scale(0.9"},
+        {gridRow: "2", gridColumn: "2",  transform: "translate3d(-10.5%, 40%, 0) scale(0.77)"},
+        {gridRow: "2", gridColumn: "3", transform: "translate3d(-15%, 60%, 0) scale(0.78)"},
         {gridRow: "1", gridColumn: "3", transform: "translate3d(0, 60%, 0) scale(0.75)"},
-        {gridRow: "1", gridColumn: "4", transform: "translate3d(-10%, 0, 0) scale(0.75"},
-        {gridRow: "2", gridColumn: "4", transform: "translate3d(-10%, 0, 0) scale(0.85"},
-        {gridRow: "3", gridColumn: "4", transform: "translate3d(-15%, 0, 0) scale(0.9"},
+        {gridRow: "1", gridColumn: "4", transform: "translate3d(-10%, 0, 0) scale(0.78"},
+        {gridRow: "2", gridColumn: "4", transform: "translate3d(-10%, 0, 0) scale(0.89"},
+        {gridRow: "3", gridColumn: "4", transform: "translate3d(-15%, 0, 0) scale(0.87"},
         {gridRow: "2", gridColumn: "5", transform: "translate3d(-20%, 0, 0) scale(0.8"},
         {gridRow: "3", gridColumn: "3", transform: "translate3d(-6%, 0, 0) scale(0.95"},
     ]
