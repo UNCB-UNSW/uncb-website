@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import pinkCircle from '../../../assets/Pink_Circle.png'
 
 const MemberWrapper = styled.div`
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    overflow: hidden;
-    border: 1px solid red;
+    height: 100%;
     &:hover {
         cursor: pointer;
     }
