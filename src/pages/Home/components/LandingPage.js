@@ -1,7 +1,7 @@
-import Navbar from '../../components/Navbar'
+import Navbar from '../../../components/Navbar'
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
-import ArrowImg from '../../assets/arrow.svg'
+import ArrowImg from '../../../assets/arrow.svg'
 
 const LandingWrapper = styled.section`
     display: flex;

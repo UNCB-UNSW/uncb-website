@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Box from '../../assets/articles_box.svg'
+import Box from '../../../assets/articles_box.svg'
 import {useState, useEffect} from "react";
 
 const ArticlesSection = styled.section`

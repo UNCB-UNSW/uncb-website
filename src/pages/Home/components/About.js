@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Box from '../../assets/about_box.svg'
+import Box from '../../../assets/about_box.svg'
 
 const AboutSection = styled.section`
     height: 100vh;

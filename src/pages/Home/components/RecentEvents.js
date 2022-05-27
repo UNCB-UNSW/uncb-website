@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Box from '../../assets/events_box.svg'
+import Box from '../../../assets/events_box.svg'
 import {useState, useEffect} from "react";
 
 const RecentEvents = () => {

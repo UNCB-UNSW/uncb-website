@@ -4,19 +4,17 @@ import pinkCircle from '../../assets/Pink_Circle.png'
 import Member from './components/Member'
 import {execData, dirData, advisorData} from './components/MembersData'
 
-const Box = styled.div`
-    border: 1px solid black;
-    background-color: blue;
-    width: 90%;
-    height: 100%;
+const MatrixWrapper = styled.div`
+    display: flex;
+    justify-content: center;
 `
 
-const MatrixWrapper = styled.div`
+const MatrixContainer = styled.div`
     margin: 15px;
     position: relative;
     display: grid;
-    grid-template-rows: repeat(6, 200px);
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 28vh);
+    grid-template-columns: repeat(5, 13vw);
     row-gap: 25px;
     column-gap: 10px;
 `
@@ -45,13 +43,15 @@ const Team = () => {
         <div>
             <Navbar/>
             <MatrixWrapper>
-                {execData.map((ele, index) => {
-                    return (
-                        <MatrixItemWrapper style={stylesArr[index]} >
-                            <Member memberData={ele}/>
-                        </MatrixItemWrapper>
-                    )
-                })}
+                <MatrixContainer>
+                    {execData.map((ele, index) => {
+                        return (
+                            <MatrixItemWrapper style={stylesArr[index]} >
+                                <Member memberData={ele}/>
+                            </MatrixItemWrapper>
+                        )
+                    })}
+                </MatrixContainer>
             </MatrixWrapper>
         </div>
     )

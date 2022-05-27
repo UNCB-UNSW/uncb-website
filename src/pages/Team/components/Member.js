@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import pinkCircle from '../../../assets/Pink_Circle.png'
+import Eric from '../teamPhotos/eric.jpg'
 
 const MemberWrapper = styled.div`
     position: absolute;
@@ -73,13 +73,21 @@ const MemberDetails = styled.div`
 const MemberPic = styled.div`
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-position: center center;
+    background-repeat: no-repeat; /* Background image doesn’t tile */ 
+    background-size: cover; /* This is what makes the background image rescale based on the container’s size */
+    background-image: url(${props => props.src});
+    filter: grayscale(0.9);
+    transition: 0.5s ease-in-out;
+    &:hover {
+        filter: none;
+    }
 `
 
 const Member = ({memberData, style}) => {
     return (
         <MemberWrapper style={style}>
-            <MemberPic src={pinkCircle}></MemberPic>
+            <MemberPic src={Eric}></MemberPic>
             <Overlay>
                 <MemberDetails>
                     <h2>{memberData.name}</h2>
