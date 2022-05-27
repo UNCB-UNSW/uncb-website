@@ -4,7 +4,30 @@ import pinkCircle from '../../assets/Pink_Circle.png'
 import Member from './components/Member'
 import {execData, dirData, advisorData} from './components/MembersData'
 
+
+const ExecContainer = styled.section`
+    display: flex;
+`
+
+const LeftWrapper = styled.div`
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const ExecTitle = styled.h1`
+    font-family: GothicBlack;
+    font-size: 6vh;
+    width: 50vh;
+    color: ${({ theme }) => theme.mainText};
+    text-align: center;
+    transform: rotate(-90deg);
+`
+
 const MatrixWrapper = styled.div`
+    flex: 1;
+
     display: flex;
     justify-content: center;
 `
@@ -42,17 +65,24 @@ const Team = () => {
     return (
         <div>
             <Navbar/>
-            <MatrixWrapper>
-                <MatrixContainer>
-                    {execData.map((ele, index) => {
-                        return (
-                            <MatrixItemWrapper style={stylesArr[index]} >
-                                <Member memberData={ele}/>
-                            </MatrixItemWrapper>
-                        )
-                    })}
-                </MatrixContainer>
-            </MatrixWrapper>
+            <ExecContainer>
+                <LeftWrapper>
+                    <ExecTitle>
+                        Meet the Execs
+                    </ExecTitle>
+                </LeftWrapper>
+                <MatrixWrapper>
+                    <MatrixContainer>
+                        {execData.map((ele, index) => {
+                            return (
+                                <MatrixItemWrapper style={stylesArr[index]} >
+                                    <Member memberData={ele}/>
+                                </MatrixItemWrapper>
+                            )
+                        })}
+                    </MatrixContainer>
+                </MatrixWrapper>
+            </ExecContainer>
         </div>
     )
 }
