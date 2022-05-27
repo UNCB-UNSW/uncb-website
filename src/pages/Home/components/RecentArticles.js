@@ -46,7 +46,8 @@ const Orange = styled.span`
     color: ${({ theme }) => theme.highlight1};;
 `
 
-const ArticlesButton = styled.button`
+const ArticlesButton = styled.a`
+    text-decoration: none;
     padding: 10px 25px 10px 25px;
     background-color: ${({ theme }) => theme.articlesBg};
     border: 1px solid ${({ theme }) => theme.mainText};
@@ -133,7 +134,7 @@ const RecentArticles = () => {
                     <Subtitle>(what we do)</Subtitle>
                     <Cube src={Box}/>
                     <ArticlesTitle>Recent <br/><Orange>Articles</Orange>.</ArticlesTitle>
-                    <ArticlesButton>All Articles</ArticlesButton>
+                    <ArticlesButton href="https://www.uncb.xyz/blog" target='_blank'>All Articles</ArticlesButton>
                 </Container>
             </LeftWrapper>
             <RightWrapper>

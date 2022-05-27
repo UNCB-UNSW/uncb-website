@@ -23,11 +23,9 @@ const RecentEvents = () => {
     }
     
     useEffect(() => {
-        console.log('WTFFF')
         fetchData()
     }, []);
     
-    console.log(Data)
     return (
         <RecentEventsSection>
             <TopWrapper>

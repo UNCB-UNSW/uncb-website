@@ -34,6 +34,13 @@ const LinkItems = styled(Link)`
     margin: 0 60px 0 60px;
 `
 
+const BlogLink = styled.a`
+    color: ${({ theme }) => theme.mainText};
+    text-decoration: none;  
+    font-size: 1.7vw;
+    margin: 0 60px 0 60px;
+`
+
 const ThemeButton = styled.button`
     background: none;
     cursor: pointer;
@@ -62,7 +69,7 @@ const Navbar = () => {
                 <LinkItems to="/team">Team</LinkItems>
                 <LinkItems to="/events">Events</LinkItems>
                 <LinkItems to="/sponsors">Sponsors</LinkItems>
-                <LinkItems to="/blog">Blog</LinkItems>
+                <BlogLink href="https://www.uncb.xyz/blog" target='_blank'>Blog</BlogLink>
             </LinkWrapper>
             <ThemeButton onClick={ThemeChange}><Img src={darkMode ? Moon : Sun} alt="darkMode" draggable="false" /></ThemeButton>
         </NavbarWrapper>

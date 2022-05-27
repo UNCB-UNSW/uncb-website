@@ -1,6 +1,5 @@
 import Navbar from '../../../components/Navbar'
 import styled from 'styled-components'
-import { Link } from "react-router-dom";
 import ArrowImg from '../../../assets/arrow.svg'
 
 const LandingWrapper = styled.section`
@@ -28,7 +27,7 @@ const BottomWrapper = styled.div`
     justify-content: space-between;
 `
 
-const Button = styled(Link)`
+const Button = styled.a`
     font-family: Raleway;
     text-decoration: none;  
     color: ${({ theme }) => theme.mainText};
@@ -91,7 +90,7 @@ const LandingPage = () => {
                     </TextWrapper>
 
                     <BottomWrapper>
-                        <Button to="/blog">Check out our blog! <Arrow src={ArrowImg} alt="arrow"/></Button>
+                        <Button href="https://www.uncb.xyz/blog" target='_blank'>Check out our blog! <Arrow src={ArrowImg} alt="arrow"/></Button>
                         <ExploreWrapper onClick={scrollHandler}>
                             <ExploreText>
                                 Explore.
