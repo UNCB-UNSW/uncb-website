@@ -9,9 +9,17 @@ import { useContext } from 'react';
 
 const NavbarWrapper = styled.nav`
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 10px 50px 10px 50px;
     border-bottom: 1px solid ${({ theme }) => theme.mainText};
+
+    background-color:  ${({ theme }) => theme.background}; 
+    position: sticky;
+    top: 0;
+
+    opacity: 0.85;
+    z-index: 999;
 `
 
 const LinkWrapper = styled.ul`
