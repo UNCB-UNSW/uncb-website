@@ -5,24 +5,24 @@ import Member from './components/Member'
 import {execData, dirData, advisorData} from './components/MembersData'
 
 
-const ExecContainer = styled.section`
+const MainContainer = styled.section`
     display: flex;
 `
 
-const LeftWrapper = styled.div`
+const Wrapper = styled.div`
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 `
 
-const ExecTitle = styled.h1`
+const Title = styled.h1`
     font-family: GothicBlack;
     font-size: 6vh;
-    width: 50vh;
+    width: 60vh;
     color: ${({ theme }) => theme.mainText};
     text-align: center;
-    transform: rotate(-90deg);
+    transform: ${props => props.director ? 'rotate(90deg)' : 'rotate(-90deg)'}
 `
 
 const MatrixWrapper = styled.div`
@@ -65,12 +65,12 @@ const Team = () => {
     return (
         <div>
             <Navbar/>
-            <ExecContainer>
-                <LeftWrapper>
-                    <ExecTitle>
+            <MainContainer>
+                <Wrapper>
+                    <Title>
                         Meet the Execs
-                    </ExecTitle>
-                </LeftWrapper>
+                    </Title>
+                </Wrapper>
                 <MatrixWrapper>
                     <MatrixContainer>
                         {execData.map((ele, index) => {
@@ -82,7 +82,26 @@ const Team = () => {
                         })}
                     </MatrixContainer>
                 </MatrixWrapper>
-            </ExecContainer>
+            </MainContainer>
+
+            <MainContainer>
+                <MatrixWrapper>
+                    <MatrixContainer>
+                        {execData.map((ele, index) => {
+                            return (
+                                <MatrixItemWrapper style={stylesArr[index]} >
+                                    <Member memberData={ele}/>
+                                </MatrixItemWrapper>
+                            )
+                        })}
+                    </MatrixContainer>
+                </MatrixWrapper>
+                <Wrapper>
+                    <Title director>
+                        Meet the Directors
+                    </Title>
+                </Wrapper>
+            </MainContainer>
         </div>
     )
 }
