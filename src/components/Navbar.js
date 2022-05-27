@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../ThemeContext";
 import { useContext } from 'react';
 
-const NavbarWrapper = styled.div`
+const NavbarWrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     padding: 10px 50px 10px 50px;

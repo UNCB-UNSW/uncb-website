@@ -32,11 +32,13 @@ const Subtitle  = styled.div`
 const Cube = styled.img`
     width: 10vw;
     filter: ${({theme}) => theme.darkMode === true ? 'invert(100%) sepia(0%) saturate(7500%) hue-rotate(324deg) brightness(105%) contrast(104%)' : 'none'}; // turn box to white for darkmode
+    margin: 5vh 0 10vh 0;
 `
 
 const ArticlesTitle = styled.div`
     font-size: 3.5vw;
     font-family: GothicBlack;
+    margin-bottom: 10vh;
 `
 
 const Orange = styled.span`
@@ -76,6 +78,10 @@ const ArticleImg = styled.img`
     background-size: cover; /* This is what makes the background image rescale based on the container’s size */
     background-image: url(${props => props.backgroundImg});
     filter: saturate(10%) contrast(120%) hue-rotate(90deg) brightness(100%);
+    transition: 0.5s ease-in-out;
+    &:hover {
+        filter: none;
+    }
 `
 
 const Title = styled.h1`

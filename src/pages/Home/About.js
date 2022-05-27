@@ -64,7 +64,7 @@ const About = () => {
             <BottomWrapper>
                 <CubeImg src={Box}/>
                 <BottomText>
-                We know that navigating the new blockchain space is scary, and we are here to help. 
+                We know that navigating the blockchain space is scary, and we are here to help. 
                 We believe everyone should have fundamental knowledge on a technology as disruptive as the internet.
                 </BottomText>
             </BottomWrapper>

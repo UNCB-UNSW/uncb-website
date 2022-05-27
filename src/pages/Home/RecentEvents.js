@@ -106,6 +106,10 @@ const BlogImg = styled.div`
     background-size: cover; /* This is what makes the background image rescale based on the container’s size */
     background-image: url(${props => props.backgroundImg});
     filter: saturate(10%) contrast(120%) hue-rotate(90deg) brightness(100%);
+    transition: 0.5s ease-in-out;
+    &:hover {
+        filter: none;
+    }
 `
 
 const RightWrapper = styled.div`
