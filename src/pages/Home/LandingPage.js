@@ -31,10 +31,10 @@ const BottomWrapper = styled.div`
 const Button = styled(Link)`
     font-family: Raleway;
     text-decoration: none;  
-    color: black;
+    color: ${({ theme }) => theme.mainText};
 
     padding: 20px;
-    border: 1.5px solid black;
+    border: 1.5px solid ${({ theme }) => theme.mainText};
     border-radius: 10px;
 
     text-transform: none;
@@ -67,7 +67,7 @@ const Box = styled.div`
     width: 70px;
     height: 70px;
     border-radius: 8px;
-    background-color: #FF8C5B;
+    background-color: ${({ theme }) => theme.highlight1};
 
     position: absolute;
     top: 0;

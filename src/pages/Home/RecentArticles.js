@@ -4,12 +4,13 @@ import {useState, useEffect} from "react";
 
 const ArticlesSection = styled.section`
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid ${({ theme }) => theme.subText};
+    background-color: ${({ theme }) => theme.articlesBg};
 `
 
 const LeftWrapper = styled.div`
     width: 25vw;
-    border-right: 1px solid black;
+    border-right: 1px solid ${({ theme }) => theme.subText};
 
     display: flex;
     justify-content: center;
@@ -25,7 +26,7 @@ const Subtitle  = styled.div`
     text-transform: uppercase;
     font-family: GothicBold;
     font-size: 18px;
-    color: #7E7E7E;
+    color: ${({ theme }) => theme.subtitle};
 `
 
 const Cube = styled.img`
@@ -39,12 +40,13 @@ const ArticlesTitle = styled.div`
 
 const Orange = styled.span`
     font-size: inherit;
-    color: #ff8c5b;
+    color: ${({ theme }) => theme.highlight1};;
 `
 
 const ArticlesButton = styled.button`
     padding: 10px 25px 10px 25px;
-    border: 1px solid black;
+    background-color: ${({ theme }) => theme.articlesBg};
+    border: 1px solid ${({ theme }) => theme.mainText};
 `
 
 const RightWrapper = styled.div`
@@ -82,14 +84,14 @@ const ReadArticleButton = styled.a`
     text-decoration: none;
     cursor: pointer;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid ${({ theme }) => theme.mainText};
     font-family: Raleway;
     font-weight: 500;
-    color: #4F4F4F;
+    color: ${({ theme }) => theme.mainText};
 `
 
 const Yellow = styled.span`
-    color: #FFD700;
+    color: ${({ theme }) => theme.highlight2};;
 `
 
 const RecentArticles = () => {

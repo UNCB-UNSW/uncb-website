@@ -71,7 +71,7 @@ const TopWrapper = styled.div`
 
 const Subtitle = styled.div`
     font-size: 1vw;
-    color: #7E7E7E;
+    color: ${({ theme }) => theme.subtitle};
     font-family: GothicBold;
     text-transform: uppercase;
 `
@@ -83,7 +83,7 @@ const Title = styled.div`
 
 const OrangeColor = styled.span`
     font-size: inherit;
-    color: #FF8C5B;
+    color: ${({ theme }) => theme.highlight1};
 `
 
 const CubeImg = styled.img`
@@ -91,8 +91,8 @@ const CubeImg = styled.img`
 `
 
 const BlogWrapper = styled.div`
-    border-top: 0.5px solid black;
-    border-bottom: 0.5px solid black;
+    border-top: 0.5px solid ${({ theme }) => theme.subText};
+    border-bottom: 0.5px solid ${({ theme }) => theme.subText};
     padding: 30px 30px 30px 0;
     display: flex;
 `
@@ -128,21 +128,21 @@ const BottomInfo = styled.div`
 
 const Date = styled.div`
     font-family: GothicMedium;
-    color: #656565;
+    color: ${({ theme }) => theme.subtitle};;
     font-size: 18px;
     align-self: flex-end;
 `
 
 const LearnMore = styled.a`
-    border: 1px solid black;
+    border: 1px solid ${({ theme }) => theme.mainText};;
     padding: 10px;
-    color: black;
+    color: ${({ theme }) => theme.mainText};
     text-decoration: none;
     cursor: pointer;
 `
 
 const Yellow = styled.span`
-    color: #FFD700;
+    color: ${({ theme }) => theme.highlight1};;
 `
 
 export default RecentEvents

@@ -15,7 +15,7 @@ const TopWrapper = styled.div`
 
 const Subtitle = styled.div`
     font-family: GothicBold;
-    color: #7E7E7E;
+    color: ${({ theme }) => theme.subtitle};;
     font-size: 1vw;
     text-transform: uppercase;
 `
@@ -27,7 +27,7 @@ const MainTitle = styled.div`
 
 const OrangeText = styled.span`
     font-size: inherit;
-    color: #FF8C5B;
+    color: ${({theme}) => theme.highlight1};
 `
 
 const BottomWrapper = styled.div`
@@ -42,7 +42,7 @@ const CubeImg = styled.img`
 
 const BottomText = styled.div`  
     width: 50%;
-    color: #646464;
+    color: ${({ theme }) => theme.subText};;
     font-size: 1.9vw;
 `
 
@@ -63,9 +63,8 @@ const About = () => {
             <BottomWrapper>
                 <CubeImg src={Box}/>
                 <BottomText>
-                    We know that choosing the unconventional path of entrepreneurship is hard. 
-                    Which is why we serve as a clearinghouse of opportunities for founders and 
-                    investors to retain the potential that our city needs.
+                We know that navigating the new blockchain space is scary, and we are here to help. 
+                We believe everyone should have fundamental knowledge on a technology as disruptive as the internet.
                 </BottomText>
             </BottomWrapper>
         </AboutSection>
