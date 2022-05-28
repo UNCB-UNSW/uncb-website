@@ -5,6 +5,8 @@ import { execData, dirData } from './components/MembersData'
 
 const MainContainer = styled.section`
     display: flex;
+    max-width: 100vw;
+    overflow: clip;
 `
 
 const Wrapper = styled.div`
@@ -24,8 +26,7 @@ const Title = styled.h1`
 `
 
 const MatrixWrapper = styled.div`
-    flex: 1;
-
+    flex: 4;
     display: flex;
     justify-content: center;
 `
