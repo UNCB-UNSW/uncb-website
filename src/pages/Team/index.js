@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar'
 import styled from 'styled-components'
 import Member from './components/Member'
 import { execData, dirData } from './components/MembersData'
+import {useState} from 'react'
 
 const MainContainer = styled.section`
     display: flex;

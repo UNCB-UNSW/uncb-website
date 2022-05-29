@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import Modal from './Modal'
 
 const MemberWrapper = styled.div`
     position: absolute;
@@ -34,10 +35,8 @@ const Overlay = styled.div`
 `
 
 const MemberDetails = styled.div`
+    transform: translateY(50%);
     opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 0;
     overflow: hidden;
     width: 100%;
     z-index: 2;
@@ -49,7 +48,7 @@ const MemberDetails = styled.div`
 
     ${MemberWrapper}:hover & {
         opacity: 1;
-        transform: translateY(-50%);
+        transform: translateY(0);
         color: white;
     }
 
@@ -83,8 +82,16 @@ const MemberPic = styled.div`
     }
 `
 
+const ViewProfileBtn = styled.button`
+    width: 200px;
+    height: auto;
+    z-index: 4;
+    color: white;
+`
+
 const Member = ({memberData, style}) => {
-    console.log(memberData.imgPath)
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <MemberWrapper style={style}>
             <MemberPic src={memberData.imgPath}></MemberPic>
@@ -94,7 +101,11 @@ const Member = ({memberData, style}) => {
                     <h4>{memberData.description}</h4>
                     <h6>{memberData.role}</h6>
                 </MemberDetails>
+                <ViewProfileBtn onClick={() => setIsOpen(true)}>View {memberData.name + '\'s'} Profile</ViewProfileBtn>
             </Overlay>
+            <Modal isOpen={isOpen} handleClose={() => setIsOpen(false)}>
+                <span>Hi, I'm {memberData.name}</span>
+            </Modal>
         </MemberWrapper>
     )
 }
