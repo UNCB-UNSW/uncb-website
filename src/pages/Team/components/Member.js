@@ -123,6 +123,19 @@ const ProfilePic = styled(MemberPic)`
 const Member = ({memberData, style}) => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const handleOpen = () => {
+        setIsOpen(true);
+        console.log(document.getElementById("teams-body"))
+        document.getElementById("teams-body").style.height = "0px";
+        document.getElementById("teams-body").style.overflowY = "hidden";
+    }
+
+    const handleClose = () => {
+        setIsOpen(false);
+        document.getElementById("teams-body").style.height = "auto";
+        document.getElementById("teams-body").style.overflowY = "scroll";
+    }
+
     return (
         <MemberWrapper style={style}>
             <MemberPic src={memberData.imgPath}></MemberPic>
@@ -132,9 +145,9 @@ const Member = ({memberData, style}) => {
                     <h4>{memberData.description}</h4>
                     <h6>{memberData.role}</h6>
                 </MemberDetails>
-                <ViewProfileBtn onClick={() => setIsOpen(true)}>View {memberData.name + '\'s'} Profile</ViewProfileBtn>
+                <ViewProfileBtn onClick={handleOpen}>View {memberData.name + '\'s'} Profile</ViewProfileBtn>
             </Overlay>
-            <Modal isOpen={isOpen} handleClose={() => setIsOpen(false)}>
+            <Modal isOpen={isOpen} handleClose={handleClose}>
                 <Profile>
                     <ProfilePic src={memberData.imgPath}></ProfilePic>
                     <div>

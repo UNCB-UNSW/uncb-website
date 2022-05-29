@@ -63,7 +63,7 @@ const Team = () => {
     ]   
 
     return (
-        <div>
+        <div id="teams-body" style={{overflowY: "hidden"}}>
             <Navbar/>
             <MainContainer>
                 <Wrapper>

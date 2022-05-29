@@ -33,12 +33,11 @@ const ModalWrapper = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflowY: hidden;
 	-webkit-animation: ${popSwirl} 1s ease forwards;
 `
 
 const Modal = ({ isOpen, handleClose, children }) => {
-	
+
 	return ReactDOM.createPortal(
 		<>
 			{isOpen &&
