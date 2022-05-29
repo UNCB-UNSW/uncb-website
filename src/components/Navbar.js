@@ -15,11 +15,11 @@ const NavbarWrapper = styled.nav`
     border-bottom: 1px solid ${({ theme }) => theme.mainText};
 
     background-color:  ${({ theme }) => theme.background}; 
-    position: sticky;
-    top: 0;
+    // position: sticky;
+    // top: 0;
 
     opacity: 0.85;
-    z-index: 999;
+    z-index: 500;
 `
 
 const LinkWrapper = styled.ul`

@@ -1,6 +1,16 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { keyframes } from 'styled-components'
 import Modal from './Modal'
+
+const ColourIn = keyframes`
+    0% {
+        filter: grayscale(0.8);
+    }
+    100% {
+        filter: none;
+    }
+`
 
 const MemberWrapper = styled.div`
     position: absolute;
@@ -89,6 +99,27 @@ const ViewProfileBtn = styled.button`
     color: white;
 `
 
+const Profile = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+`
+
+const ProfileDesc = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const ProfilePic = styled(MemberPic)`
+    width: 25%;
+    height: 60%;
+    border-radius: 20px;
+    -webkit-animation: ${ColourIn} 2s ease-in-out forwards;
+`
+
 const Member = ({memberData, style}) => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -104,7 +135,12 @@ const Member = ({memberData, style}) => {
                 <ViewProfileBtn onClick={() => setIsOpen(true)}>View {memberData.name + '\'s'} Profile</ViewProfileBtn>
             </Overlay>
             <Modal isOpen={isOpen} handleClose={() => setIsOpen(false)}>
-                <span>Hi, I'm {memberData.name}</span>
+                <Profile>
+                    <ProfilePic src={memberData.imgPath}></ProfilePic>
+                    <div>
+                        <span>Hi, I'm {memberData.name}</span>
+                    </div>
+                </Profile>
             </Modal>
         </MemberWrapper>
     )
