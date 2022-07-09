@@ -145,16 +145,16 @@ const Member = ({memberData, style}) => {
                     <h4>{memberData.description}</h4>
                     <h6>{memberData.role}</h6>
                 </MemberDetails>
-                <ViewProfileBtn onClick={handleOpen}>View {memberData.name + '\'s'} Profile</ViewProfileBtn>
+                {/* <ViewProfileBtn onClick={handleOpen}>View {memberData.name + '\'s'} Profile</ViewProfileBtn> */}
             </Overlay>
-            <Modal isOpen={isOpen} handleClose={handleClose}>
+            {/* <Modal isOpen={isOpen} handleClose={handleClose}>
                 <Profile>
                     <ProfilePic src={memberData.imgPath}></ProfilePic>
                     <div>
                         <span>Hi, I'm {memberData.name}</span>
                     </div>
                 </Profile>
-            </Modal>
+            </Modal> */}
         </MemberWrapper>
     )
 }
